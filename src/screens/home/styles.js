@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
 	img: { width: 25, height: 25, resizeMode: 'center' },
 	row: { height: 55, paddingHorizontal: 10, borderBottomWidth: 1, borderColor: colors.global.whiteRgb(.5), flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
 	rowLast: { height: 55, paddingHorizontal: 10, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-	boxMetrica: { flex: 1, height: 220, borderRadius: 8, elevation: 1, marginBottom: 20, backgroundColor: colors.global.whiteRgb(.5) },
+	boxMetrica: { flex: 1, height: 275, borderRadius: 8, elevation: 1, marginBottom: 20, backgroundColor: colors.global.whiteRgb(.5) },
 	bold: { fontWeight: 'bold' },
 	colRight: { flexDirection: 'row', justifyContent: 'space-between', width: 50, alignItems: 'center' }
 })

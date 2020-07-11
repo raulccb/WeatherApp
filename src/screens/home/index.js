@@ -78,29 +78,33 @@ export default function Home(props) {
         </View>
     )
 
-    Metrics = obj => (
+    Metrics = ({ main, wind }) => (
         <View style={styles.boxMetrica}>
+            <View style={styles.row}>
+                <Text>Temperatura agora</Text>
+                <Text style={styles.bold}>{main.temp}°</Text>
+            </View>
             <View style={styles.row}>
                 <Text>Temperatura (max)</Text>
                 <View style={styles.colRight}>
-                    <Text style={styles.bold}>25°</Text>
+                    <Text style={styles.bold}>{main.temp_max}°</Text>
                     <Image source={images.max} style={styles.img} />
                 </View>
             </View>
             <View style={styles.row}>
                 <Text>Temperatura (min)</Text>
                 <View style={styles.colRight}>
-                    <Text style={styles.bold}>25°</Text>
+                    <Text style={styles.bold}>{main.temp_min}°</Text>
                     <Image source={images.min} style={styles.img} />
                 </View>
             </View>
             <View style={styles.row}>
                 <Text>Vento</Text>
-                <Text style={styles.bold}>20km/h</Text>
+                <Text style={styles.bold}>{wind.speed}km/h</Text>
             </View>
             <View style={styles.rowLast}>
                 <Text>Umidade</Text>
-                <Text style={styles.bold}>20%</Text>
+                <Text style={styles.bold}>{main.humidity}%</Text>
             </View>
         </View>
     )
@@ -132,7 +136,7 @@ export default function Home(props) {
                     bgColor={getColor()}>
 
                     <Description data={data.weather[0]} />
-                    <Metrics />
+                    <Metrics {...data} />
 
                     <UcButtonIcon
                         onPress={showJSON.bind(this, location)}
